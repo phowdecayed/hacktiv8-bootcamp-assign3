@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Produk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Informasi Produk</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="productForm">
+                            <!-- Product Name -->
+                            <div class="mb-3">
+                                <label for="productName" class="form-label">Nama Produk*</label>
+                                <input type="text" class="form-control" id="productName" required>
+                                <div class="error-message" id="productNameError"></div>
+                            </div>
+                            
+                            <!-- Stock Status -->
+                            <div class="mb-3">
+                                <label for="stockStatus" class="form-label">Status Stok*</label>
+                                <select class="form-select" id="stockStatus" required>
+                                    <option value="">Pilih Status Stok</option>
+                                    <option value="In Stock">Tersedia</option>
+                                    <option value="Out of Stock">Tidak Tersedia</option>
+                                </select>
+                                <div class="error-message" id="stockStatusError"></div>
+                            </div>
+                            
+                            <!-- Price -->
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Harga*</label>
+                                <input type="number" class="form-control" id="price" min="0" required>
+                                <div class="error-message" id="priceError"></div>
+                            </div>
+                            
+                            <!-- Description -->
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Deskripsi*</label>
+                                <textarea class="form-control" id="description" rows="3" required></textarea>
+                                <div class="error-message" id="descriptionError"></div>
+                            </div>
+                            
+                            <!-- Quantity -->
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Jumlah*</label>
+                                <input type="number" class="form-control" id="quantity" min="0" required>
+                                <div class="error-message" id="quantityError"></div>
+                            </div>
+                            
+                            <!-- Color -->
+                            <div class="mb-3">
+                                <label for="color" class="form-label">Warna*</label>
+                                <input type="text" class="form-control" id="color" required>
+                                <div class="error-message" id="colorError"></div>
+                            </div>
+                            
+                            <!-- Material -->
+                            <div class="mb-3">
+                                <label for="material" class="form-label">Bahan*</label>
+                                <input type="text" class="form-control" id="material" required>
+                                <div class="error-message" id="materialError"></div>
+                            </div>
+                            
+                            <!-- Brand -->
+                            <div class="mb-3">
+                                <label for="brand" class="form-label">Merek*</label>
+                                <input type="text" class="form-control" id="brand" required>
+                                <div class="error-message" id="brandError"></div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary" id="saveButton">Simpan Produk</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h4>Detail Produk</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="productDetails">
+                            <!-- Product details will be displayed here -->
+                            <div class="text-center">
+                                <div class="product-image-container">
+                                    <img src="https://placehold.co/300" alt="Product Image" class="product-image">
+                                </div>
+                                <p class="text-muted">Belum ada produk yang ditambahkan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-4">
+                    <div class="card-header bg-info text-white">
+                        <h4>Daftar Produk</h4>
+                    </div>
+                    <div class="card-body">
+                        <div id="productsList" class="list-group">
+                            <!-- Products list will be displayed here -->
+                            <p class="text-muted">Belum ada produk yang ditambahkan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html> 
