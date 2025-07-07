@@ -515,6 +515,9 @@ function handleEditProduct(event) {
         // Change button text
         saveButton.textContent = 'Perbarui Produk';
         
+        // Display product details in the right section
+        displayProductDetails(product);
+        
         // Scroll to top of form
         productForm.scrollIntoView({ behavior: 'smooth' });
     }
